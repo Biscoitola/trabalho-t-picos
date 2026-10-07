@@ -115,7 +115,10 @@ Incluem CRUD completo, persistência após reconexão, isolamento por usuário, 
 ## Organização
 
 - `src/server.ts`: inicialização, conexão e encerramento.
-- `src/app.ts`: rotas HTTP e tratamento de erros.
+- `src/app.ts`: configuração do Express, registro das rotas e tratamento de erros.
+- `src/routes/`: métodos e caminhos das rotas, autenticação e validação de ID.
+- `src/controllers/authController.ts`: cadastro e login.
+- `src/controllers/gameController.ts`: validação dos dados, operações do CRUD no banco e respostas HTTP.
 - `src/models.ts`: modelos User e Game.
 - `src/auth.ts`: autenticação JWT.
 - `src/validation.ts`: validação dos dados.
@@ -126,5 +129,6 @@ Incluem CRUD completo, persistência após reconexão, isolamento por usuário, 
 ## Escopo
 
 Não inclui recuperação de senha, renovação de token ou integração com lojas de jogos. MongoDB sem autenticação é uma configuração para desenvolvimento local. Para publicação, configure banco autenticado, HTTPS e segredos próprios do ambiente.
+
 
 
